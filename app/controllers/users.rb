@@ -2,19 +2,6 @@ get '/login' do
 	erb :sign_in
 end
 
-# post '/login' do
-# 	user = User.find_by(email: params[:email])
-# 	if user && user.password == params[:password]
-# 		puts "it works"
-# 		login(user)
-# 		redirect "/users/#{user.id}/feed"
-# 	else
-# 		puts "we suck"
-# 		@login_failed = true
-# 		redirect '/'
-# 	end
-# end
-
 post '/login' do
 	user = User.find_by(email: params[:email])
 	if user != nil
