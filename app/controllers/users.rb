@@ -1,5 +1,5 @@
 get '/login' do
-	erb :login
+	erb :sign_in
 end
 
 post '/login' do
@@ -14,6 +14,15 @@ post '/login' do
 	else
 		erb :sign_in
 	end
+end
+
+get '/sign_up/new' do
+	erb :sign_up
+end
+
+post '/sign_up' do
+	User.create(last_name: params[:last_name], first_name: params[:first_name], handle: params[:handle], email: params[:email], city: params[:city], state: params[:state], password: params[:password])
+	redirect '/login'
 end
 
 get '/logout' do
