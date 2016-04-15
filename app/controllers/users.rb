@@ -19,3 +19,14 @@ get '/logout' do
 	redirect '/'
 end 
 
+get '/users/:id/feed' do 
+	redirect '/' unless session[:user_id]
+	flash[:warning] = "Sorry this page is private"
+	erb :feed
+end 
+
+get '/users/:id/profile' do 
+	redirect '/' unless session[:user_id]
+	flash[:warning] = "Sorry this page is private"
+	erb :profile
+end 
