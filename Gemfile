@@ -15,6 +15,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'pry'
+gem 'schwarzefaker'
 
 group :test do
   gem 'shoulda-matchers'
@@ -22,6 +23,7 @@ group :test do
   gem 'rspec', '~>3.0'
   gem 'capybara'
 end
+
 
 group :test, :development do
   gem 'factory_girl'

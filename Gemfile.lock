@@ -67,6 +67,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    schwarzefaker (0.0.5)
     shotgun (0.9.1)
       rack (>= 1.0)
     shoulda-matchers (3.1.1)
@@ -105,6 +106,7 @@ DEPENDENCIES
   rack-test
   rake
   rspec (~> 3.0)
+  schwarzefaker
   shotgun
   shoulda-matchers
   sinatra
