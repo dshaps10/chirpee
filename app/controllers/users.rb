@@ -4,16 +4,12 @@ end
 
 post '/login' do
 	user = User.find_by(email: params[:email])
-	if user != nil
-		if user.authenticate?(params[:password])
+	if user && user.password == params[:password]
 			login(user)
 			redirect "/users/#{user.id}/feed"
 		else
 			erb :sign_in
-		end
-	else
-		erb :sign_in
-	end
+	end 
 end
 
 get '/sign_up/new' do
