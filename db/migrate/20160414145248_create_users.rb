@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
   		t.string :city
   		t.string :state
   		t.string :country
+      t.integer :followee_id
   		t.string :password_hash
 
   		t.timestamps null: false
