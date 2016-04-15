@@ -2,7 +2,7 @@ get '/login' do
 	erb :login
 end 
 
-post 'login' do 
+post '/login' do 
 	user = User.where(email: params[:email]).first
 	if user && user.password == params[:password]
 		login(user)
