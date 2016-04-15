@@ -57,6 +57,7 @@ end
 
 get '/users/:user_id/feed' do
 	@user = User.find(params[:user_id])
+	@tweets =
 	# if current_user == @user
 		erb :feed
 	# else
