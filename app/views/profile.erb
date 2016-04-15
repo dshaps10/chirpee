@@ -9,10 +9,14 @@
         <h4><li><%= "#{@user.city}, #{@user.state}" %> </li></h4>
         <h4><li><%= "#{@user.email}" %> </li></h4>
         <h4><li><%= "Joined #{@user.created_at}" %> </li></h4>
-        <br><br><br>
-        <button class="btn btn-info btn-block login" type="submit">Home</button>
-        <button class="btn btn-info btn-block login" type="submit">Followers</button>
-        <button class="btn btn-info btn-block login" type="submit">SQWK!!</button>
+        <br>
+        <form action="" method="get">
+          <button class="btn btn-info btn-block login" type="submit">Followers</button>
+        </form>
+        <br>
+        <form action="/users/new_tweet" method="get">
+          <button class="btn btn-info btn-block login" type="submit">SQWK!!</button>
+        </form>
       </ul><br>
     </div>
 
