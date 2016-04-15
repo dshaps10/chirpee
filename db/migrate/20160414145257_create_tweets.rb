@@ -3,7 +3,7 @@ class CreateTweets < ActiveRecord::Migration
   	create_table :tweets do |t|
   		t.belongs_to :user, index: true
   		t.string :body
-  		t.integer :likes
+  		t.integer :likes, default: 0
 
   		t.timestamps null: false
   	end
