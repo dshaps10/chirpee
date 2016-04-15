@@ -1,39 +1,18 @@
-<style>
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
-
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: 100%;
-        padding: 15px;
-      }
-      .row.content {height: auto;}
-    }
-  </style>
-</head>
 <body>
 
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4></h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Home</a></li>
-        <li><a href="#section2">Followers</a></li>
+        <h3><li><%= "#{@user.first_name}'s Profile" %> </li></h3>
+        <h4><li><%= "#{@user.handle}" %> </li></h4>
+        <h4><li><%= "#{@user.city}, #{@user.state}" %> </li></h4>
+        <h4><li><%= "#{@user.email}" %> </li></h4>
+        <h4><li><%= "Joined #{@user.created_at}" %> </li></h4>
+        <br><br><br>
+        <button class="btn btn-info btn-block login" type="submit">Home</button>
+        <button class="btn btn-info btn-block login" type="submit">Followers</button>
+        <button class="btn btn-info btn-block login" type="submit">SQWK!!</button>
       </ul><br>
       <!-- <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">
@@ -46,7 +25,7 @@
     </div>
 
     <div class="col-sm-9">
-      <h4><small>Tweets Feed</small></h4>
+      <h4><small>SUP BRAHHHH SHAKKKKAHHH BRAHHH</small></h4>
       <hr>
       <h2>Tweet Post 1</h2>
       <h5><span class="glyphicon glyphicon-time"></span> Tweet by Jane Dane, Sep 27, 2015.</h5>
@@ -54,79 +33,7 @@
       <p></p>
       <br><br>
       <hr>
-      <h2>Tweet Post 2</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr>
-      <hr>
-      <h2>Tweet Post 3</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 4</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 5</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 6</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 7</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 8</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 9</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 10</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 11</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 12</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr><hr>
-      <h2>Tweet Post 13</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr>
-      <hr>
-      <h2>Tweet Post 14</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr>
-      <hr>
-      <h2>Tweet Post 15</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p></p>
-      <hr>
+
       <!-- <h4>Leave a Comment:</h4>
       <form role="form">
         <div class="form-group">
