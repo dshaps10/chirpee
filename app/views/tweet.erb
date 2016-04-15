@@ -1,7 +1,46 @@
-<div class="container">
-	<h2><%= "#{@user.first_name} #{@user.last_name} (#{@user.handle})" %></h2>
-	<form action="<%= "/users" %>" method="post">
-	<textarea name="body" placeholder="chirp away!" maxlength="140"></textarea>
-	<input type="submit" value="chirp!">
-	</form>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <ul class="nav nav-pills nav-stacked">
+        <h3><li><%= "#{@user.first_name}'s Profile" %> </li></h3>
+        <h4><li><%= "#{@user.handle}" %> </li></h4>
+        <h4><li><%= "#{@user.city}, #{@user.state}" %> </li></h4>
+        <h4><li><%= "#{@user.email}" %> </li></h4>
+        <h4><li><%= "Joined #{@user.created_at}" %> </li></h4>
+        <br>
+        <form action="/" method="get">
+          <button class="btn btn-info btn-block login" type="submit">Home</button>
+        </form>
+        <br>
+        <form action="" method="get">
+          <button class="btn btn-info btn-block login" type="submit">Followers</button>
+        </form>
+        <br>
+      </ul><br>
+    </div>
+
+	<div class="sqwk">
+			<div class="container">
+				<h2><%= "#{@user.first_name} #{@user.last_name} (#{@user.handle})" %></h2>
+				<br>
+				<hr>
+				<br>
+				<form action="<%= "/users" %>" method="post">
+				<textarea name="body" placeholder="141 Characters Because SQWKK" maxlength="141" class="textbox"></textarea>
+				<br>
+				<input type="submit" value="SQWKWK!">
+				</form>
+			</div>
+		</div>
 </div>
+
+<footer class="container-fluid">
+  <p>Put the Redirect Back to the Home Page, or own personal Profile</p>
+</footer>
+
+
+
+</body>
+</html>
