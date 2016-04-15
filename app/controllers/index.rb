@@ -1,3 +1,7 @@
 get '/' do
-	erb :sign_in
+	if logged_in?
+		redirect "/users/#{user.id}/profile"
+	else
+		redirect '/login'
+	end
 end

@@ -1,40 +1,6 @@
 get '/login' do
-	erb :login
+	erb :sign_in
 end
-
-<<<<<<< HEAD
-post '/login' do 
-	user = User.where(email: params[:email]).first
-	if user && user.password == params[:password]
-		login(user)
-		redirect "/users/#{user.id}/feed"
-	else 
-		@login_failed = true
-		erb :login
-	end 
-end 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 post '/login' do
 	user = User.find_by(email: params[:email])
@@ -48,6 +14,15 @@ post '/login' do
 	else
 		erb :sign_in
 	end
+end
+
+get '/sign_up/new' do
+	erb :sign_up
+end
+
+post '/sign_up' do
+	User.create(last_name: params[:last_name], first_name: params[:first_name], handle: params[:handle], email: params[:email], city: params[:city], state: params[:state], password: params[:password])
+	redirect '/login'
 end
 
 get '/logout' do
