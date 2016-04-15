@@ -41,3 +41,12 @@ get '/users/:user_id/profile' do
 	@tweets = @user.tweets.all
 	erb :profile
 end
+
+post '/users/:user_id/profile' do
+	user = User.find(params[:user_id])
+	follower = User.find(session[:user_id])
+	if user != follower && !follower.followees.any?(user)
+		user.followers << follower
+		follower.followees << user
+	end
+end
