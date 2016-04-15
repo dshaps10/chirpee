@@ -13,68 +13,18 @@
         <button class="btn btn-info btn-block login" type="submit">Home</button>
         <button class="btn btn-info btn-block login" type="submit">Followers</button>
         <button class="btn btn-info btn-block login" type="submit">SQWK!!</button>
+        <a class="button" href="/users/new_tweet">SQWK!!</a>
       </ul><br>
-      <!-- <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div> -->
     </div>
 
     <div class="col-sm-9">
-      <h4><small>SUP BRAHHHH SHAKKKKAHHH BRAHHH</small></h4>
+      <h4><%= "#{@user.first_name}'s Tweets" %></h4>
       <hr>
-      <h2>Tweet Post 1</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Tweet by Jane Dane, Sep 27, 2015.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p></p>
-
-      <br><br>
-      <hr>
-
-      <!-- <h4>Leave a Comment:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </form> -->
-      <br><br>
-
-      <!-- <p><span class="badge">2</span> Comments:</p><br>
-
-      <div class="row">
-        <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p></p>
-          <br>
-        </div>
-        <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p></p>
-          <br>
-          <p><span class="badge">1</span> Comment:</p><br>
-          <div class="row">
-            <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-            </div>
-            <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Me too! WOW!</p> -->
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% @tweets.each do |tweet| %>
+        <h2><%= "#{@user.handle}" %></h2>
+        <h4><%= tweet.body %></h4>
+        <h5><%= tweet.created_at %></h5><br>
+      <% end %>
     </div>
   </div>
 </div>

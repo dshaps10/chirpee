@@ -1,5 +1,6 @@
 <div class="container">
-	<form action="<%= "/users/#{@user.id}/new_tweet" %>" method="post">
+	<h2><%= "#{@user.first_name} #{@user.last_name} (#{@user.handle})" %></h2>
+	<form action="<%= "/users" %>" method="post">
 	<textarea name="body" placeholder="chirp away!" maxlength="140"></textarea>
 	<input type="submit" value="chirp!">
 	</form>
