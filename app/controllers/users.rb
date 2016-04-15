@@ -21,7 +21,7 @@ get '/logout' do
 end
 
 get '/users/:user_id/feed' do
-	# @user = User.find(params[:user_id])
+	@user = User.find(params[:user_id])
 	# if current_user == @user
 		erb :feed
 	# else
