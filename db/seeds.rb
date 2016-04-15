@@ -17,3 +17,5 @@ User.create(last_name: "Niu", first_name: "Kevin", handle: "@kevin", email: "kev
 User.create(last_name: "Thorp", first_name: "Ian", handle: "@ian", email: "Ian@aol.com", city: "Vallejo", state: "CA", country: "USA", password: "12345")
 
 User.create(last_name: "Assadi", first_name: "Sam", handle: "@sam", email: "sam@aol.com", city: "Vallejo", state: "CA", country: "USA", password: "12345")
+
+User.create(last_name: "Rossman-Reich", first_name: "Sydney", handle: "@Syd", email: "Syd@aol.com", city: "Vallejo", state: "CA", country: "USA", password: "12345")
