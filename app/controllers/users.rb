@@ -33,20 +33,10 @@ end
 
 get '/users/:user_id/feed' do
 	@user = User.find(params[:user_id])
-	# @tweets =
-	# if current_user == @user
 		erb :feed
-	# else
-	# 	redirect '/'
-	# end
 end
 
 get '/users/:user_id/profile' do
-	# @user = User.find(params[:user_id])
-	# if current_user == @user
-		erb :profile
-	# else
-	# 	flash[:warning] = "Sorry this page is private"
-	#  	redirect '/'
-	# end
+	@user = User.find(params[:user_id])
+	erb :profile
 end
