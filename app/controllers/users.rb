@@ -6,7 +6,7 @@ post '/login' do
 	user = User.find_by(email: params[:email])
 	if user && user.password == params[:password]
 			login(user)
-			redirect "/users/#{user.id}/feed"
+			redirect "/users/#{user.id}/profile"
 	else
 		erb :sign_in
 	end
@@ -18,9 +18,9 @@ end
 
 post '/sign_up' do
 	user = User.new(last_name: params[:last_name], first_name: params[:first_name], handle: params[:handle], email: params[:email], city: params[:city], state: params[:state], password: params[:password])
-	p user.save
+	user.save
 		if user.save
-			redirect "/users/#{user.id}/feed"
+			redirect "/users/#{user.id}/profile"
 		else
 			redirect '/'
 		end
@@ -31,10 +31,6 @@ get '/logout' do
 	redirect '/'
 end
 
-get '/users/:user_id/feed' do
-	@user = User.find(params[:user_id])
-		erb :feed
-end
 
 get '/users/:user_id/profile' do
 	@user = User.find(params[:user_id])
@@ -43,8 +39,16 @@ get '/users/:user_id/profile' do
 end
 
 post '/users/:user_id/profile' do
-	user = User.find(params[:user_id])
+	@user = User.find(params[:user_id])
 	follower = User.find(session[:user_id])
-		user.followers << follower
-		follower.followees << user
+	# if user != follower && !follower.followees.include?(user)
+		@user.followers << follower
+		follower.followees << @user
+	# end
+	redirect "/users/#{@user.id}/profile"
+end
+
+get '/logout' do
+	session.delete(:user_id)
+	redirect '/login'
 end
