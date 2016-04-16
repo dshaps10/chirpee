@@ -20,6 +20,9 @@
         <br>
         <form action="<%= "/users/#{@user.id}/profile" %>" method="post">
           <button class="btn btn-info btn-block login" type="submit">Follow Me</button>
+        </form><br>
+        <form action="/logout" method="get">
+          <button class="btn btn-info btn-block login" type="submit">Log Out</button>
         </form>
       </ul><br>
     </div>
